@@ -131,13 +131,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # git autocomplete
-if [ -f ~/.git-prompt.sh ]; then
-	. ~/.git-prompt.sh
-fi
-
-# bash bash_completion
-if [ -f /etc/bash_completion.d/git ]; then
-	. /etc/bash_completion.d/git
+if [ -f /etc/bash_completion.d/git-prompt ]; then
+	. /etc/bash_completion.d/git-prompt
 fi
 
 # diplay git branch in terminal
