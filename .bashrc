@@ -136,4 +136,4 @@ if [ -f /etc/bash_completion.d/git-prompt ]; then
 fi
 
 # diplay git branch in terminal
-PS1="\[$Green\]\t\[$Red\]-\[$Blue\]\u\[$Yellow\]\[$Yellow\]\w\[\033[m\]\[$Cyan\]\$(__git_ps1)\[$Color_Off\]\$ "
+PS1="\[$Green\]\t\[$Red\]-\[$Blue\]\u\[$Red\]@\h\[$Yellow\]\[$Yellow\]\w\[\033[m\]\[$Cyan\]\$(__git_ps1)\[$Color_Off\]\$ "
