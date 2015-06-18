@@ -6,9 +6,10 @@ set nocompatible
 filetype indent plugin on
 
 " Turn on syntax highlighting
-syntax on
+syntax enable
 
 " Show line numbers 
+set relativenumber
 set number
 
 " Save undo history
@@ -21,9 +22,6 @@ set smartcase
 " auto indent lines depending on filetype from plugin
 set autoindent
 
-" 80 character limit line
-set colorcolumn=81
-
 " enable mouse mode for all modes
 set mouse=a
 
@@ -31,3 +29,37 @@ set mouse=a
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+
+" autoreload when file changes
+set autoread
+
+" 80 character limit
+set colorcolumn=80
+
+" pathogen
+execute pathogen#infect()
+" Installed plugins:
+" ctrlp.vim
+" editorconfig-vim
+" indentLine
+" nerdtree
+" syntastic
+" vim-airline
+" vim-colors-solarized
+" vim-sensible
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Solarized theme
+syntax enable
+let g:solarized_termcolors=256
+colorscheme solarized
+set background=dark
+
