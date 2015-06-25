@@ -1,18 +1,39 @@
-" Turn off any unexpected behavior from the OS
-set nocompatible
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-" Attempt to figure out the filetype by its extension and indent when
-" appropriate
-filetype indent plugin on
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" Turn on syntax highlighting
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" Vundle plugins
+Plugin 'tpope/vim-sensible'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'itchyny/lightline.vim'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/syntastic'
+Plugin 'tomasr/molokai'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'Yggdroot/indentLine'
+Plugin 'tpope/vim-fugitive'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" Personal preferences
+" enable syntax highlighting
 syntax enable
 
-" Show line numbers 
+" show line numbers
 set relativenumber
 set number
+set cursorline
 
-" Save undo history
+" save undo history
 set hidden
 
 " case insensitive search except for capital letters
@@ -36,30 +57,11 @@ set autoread
 " 80 character limit
 set colorcolumn=80
 
-" pathogen
-execute pathogen#infect()
-" Installed plugins:
-" ctrlp.vim
-" editorconfig-vim
-" indentLine
-" nerdtree
-" syntastic
-" vim-airline
-" vim-colors-solarized
-" vim-sensible
+" Plugin settings
+" Molokai Colorscheme
+let g:molokai_original = 1
+colorscheme molokai
 
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-" Solarized theme
-syntax enable
-let g:solarized_termcolors=256
-colorscheme solarized
-set background=dark
+" Stop hiding quotes in JSON
+let g:vim_json_syntax_conceal = 0
 
