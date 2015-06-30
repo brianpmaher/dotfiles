@@ -39,9 +39,5 @@ export JAVA_HOME=/Library/Java/Home
 # adb
 export ADB=/usr/local/bin/adb
 
-# aws
-export AWS_ACCESS_KEY_ID=AKIAIDFJREIPS3FFSWCA
-export AWS_SECRET_ACCESS_KEY=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
-
 eval "$(rbenv init -)"
 
