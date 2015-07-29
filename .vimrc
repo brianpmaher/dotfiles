@@ -20,6 +20,9 @@ Plugin 'tomasr/molokai'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'tpope/vim-fugitive'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'ngmy/vim-rubocop'
+Plugin 'tpope/vim-endwise'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
