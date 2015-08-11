@@ -1,5 +1,6 @@
 # Set terminal to 256 color mode
 export TERM="xterm-256color"
+export LANG="en_US.UTF-8"
 
 # color definitions
 # Reset
@@ -137,22 +138,6 @@ fi
 # git autocomplete
 if [ -f /etc/bash_completion.d/git-prompt ]; then
     . /etc/bash_completion.d/git-prompt
-fi
-
-
-# set propper terminal for SCREEN and TMUX
-if [[ -z $TMUX ]]; then
-    if [ -e /usr/share/terminfo/x/xterm+256color ]; then # may be xterm-256 depending on your distro
-        export TERM='xterm-256color'
-    else
-        export TERM='xterm'
-    fi
-else
-    if [ -e /usr/share/terminfo/s/screen-256color ]; then
-        export TERM='screen-256color'
-    else
-        export TERM='screen'
-    fi
 fi
 
 # diplay git branch in terminal
