@@ -22,9 +22,6 @@ fi
 # put /usr/local/bin in front of bin to get to homebrew versions
 export PATH=/usr/local/bin:$PATH
 
-# tmux
-alias tmux="TERM=screen-256color-bce tmux"
-
 # go stuff
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go

@@ -1,3 +1,7 @@
+# Set terminal to 256 color mode
+export TERM="xterm-256color"
+export LANG="en_US.UTF-8"
+
 # color definitions
 # Reset
 Color_Off='\e[0m'       # Text Reset
@@ -109,6 +113,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias tmux='tmux -2'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -132,8 +137,8 @@ fi
 
 # git autocomplete
 if [ -f /etc/bash_completion.d/git-prompt ]; then
-	. /etc/bash_completion.d/git-prompt
+    . /etc/bash_completion.d/git-prompt
 fi
 
 # diplay git branch in terminal
-PS1="\[$Green\]\t\[$Red\]-\[$Blue\]\u\[$Red\]@\h\[$Yellow\]\[$Yellow\]\w\[\033[m\]\[$Cyan\]\$(__git_ps1)\[$Color_Off\]\$ "
+PS1="\[$Green\]\u\[$Color_Off\]:\w\[$Yellow\]\$(__git_ps1)\[$Color_Off\]\$ "
