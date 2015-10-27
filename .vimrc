@@ -23,6 +23,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'tpope/vim-endwise'
+Plugin 'walm/jshint.vim'
+Plugin 'severin-lemaignan/vim-minimap'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
