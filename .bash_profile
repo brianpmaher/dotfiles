@@ -34,14 +34,15 @@ export GOAPPENGINE=/usr/local/go_appengine
 export ANDROID_HOME=/usr/local/bin/android 
 
 # java
-export JAVA_HOME=/Library/Java/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home
 
 # adb
 export ADB=/usr/local/bin/adb
 
 # aws
-export AWS_ACCESS_KEY_ID=AKIAIDFJREIPS3FFSWCA
-export AWS_SECRET_ACCESS_KEY=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
+if [ -f $HOME/.aws ]; then
+    . $HOME/.aws
+fi
 
 eval "$(rbenv init -)"
 
