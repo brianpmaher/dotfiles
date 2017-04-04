@@ -1,5 +1,5 @@
 # Set terminal to 256 color mode
-export TERM="xterm-256color"
+export TERM="screen-256color"
 export LANG="en_US.UTF-8"
 
 # color definitions
@@ -141,4 +141,4 @@ if [ -f /etc/bash_completion.d/git-prompt ]; then
 fi
 
 # diplay git branch in terminal
-PS1="\[$Green\]\u\[$Color_Off\]:\w\[$Yellow\]\$(__git_ps1)\[$Color_Off\]\$ "
+PS1="\[$IGreen\]\u\[$Color_Off\]:\w\[$IYellow\]\$(__git_ps1)\[$Color_Off\]\$ "
