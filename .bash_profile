@@ -1,5 +1,7 @@
 LICOLOR=1
 alias ls='ls -G'
+alias la='ls -al'
+alias bake='bundle exec rake'
 
 function parse_git_branch () {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -8,9 +10,9 @@ function parse_git_branch () {
 RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
 GREEN="\[\033[0;32m\]"
-NO_COLOUR="\[\033[0m\]"
+NO_COLOR="\[\033[0m\]"
  
-PS1="$GREEN\u$NO_COLOUR:\w$YELLOW\$(parse_git_branch)$NO_COLOUR\$ "
+PS1="\w$YELLOW\$(parse_git_branch) $NO_COLOR\$ "
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
@@ -21,6 +23,10 @@ fi
 
 # put /usr/local/bin in front of bin to get to homebrew versions
 export PATH=/usr/local/bin:$PATH
+
+if [ -d ~/Library/Android/sdk/tools ]; then
+    PATH=$PATH:~/Library/Android/sdk/tools:~/Library/Android/sdk/platform-tools
+fi
 
 # go stuff
 export GOROOT=/usr/local/go
