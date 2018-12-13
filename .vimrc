@@ -55,12 +55,12 @@ set expandtab
 set autoread
 
 " 80 character limit
-set colorcolumn=80
+"set colorcolumn=80
 
 " Plugin settings
 " Molokai Colorscheme
-let g:molokai_original = 1
-colorscheme molokai
+"let g:molokai_original = 1
+"colorscheme molokai
 
 " Stop hiding quotes in JSON
 let g:vim_json_syntax_conceal = 0
