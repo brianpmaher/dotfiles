@@ -1,28 +1,22 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+" Plugins will be downloaded under the specified directory.
+call plug#begin('~/.vim/plugged')
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Declare the list of plugins.
+Plug 'tpope/vim-sensible'            " sensible vim defaults
+Plug 'crusoexia/vim-monokai'         " Monokai color scheme
+Plug 'pangloss/vim-javascript'       " JS syntax highlighting
+Plug 'mxw/vim-jsx'                   " JSX syntax highlighting
+Plug 'w0rp/ale'                      " Syntax checking
+Plug 'kien/ctrlp.vim'                " Fuzzy file search
+Plug 'scrooloose/nerdtree'           " File explorer
+Plug 'editorconfig/editorconfig-vim' " Editorconfig
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
 
-" Vundle plugins
-Plugin 'tpope/vim-sensible'
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
-Plugin 'itchyny/lightline.vim'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/syntastic'
-Plugin 'tomasr/molokai'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'Yggdroot/indentLine'
-Plugin 'Valloric/YouCompleteMe'
-
-call vundle#end()            " required
-filetype plugin indent on    " required
+" monokai settings
+syntax on
+colorscheme monokai
 
 " Personal preferences
 " enable syntax highlighting
@@ -46,22 +40,12 @@ set autoindent
 " enable mouse mode for all modes
 set mouse=a
 
-" indentation for spaces instead of tabs
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-
 " autoreload when file changes
 set autoread
 
-" 80 character limit
-"set colorcolumn=80
-
-" Plugin settings
-" Molokai Colorscheme
-"let g:molokai_original = 1
-"colorscheme molokai
-
-" Stop hiding quotes in JSON
-let g:vim_json_syntax_conceal = 0
+" general indentation
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
 
