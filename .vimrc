@@ -2,21 +2,31 @@
 call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins.
-Plug 'tpope/vim-sensible'            " sensible vim defaults
-Plug 'crusoexia/vim-monokai'         " Monokai color scheme
-Plug 'pangloss/vim-javascript'       " JS syntax highlighting
-Plug 'mxw/vim-jsx'                   " JSX syntax highlighting
-Plug 'w0rp/ale'                      " Syntax checking
-Plug 'kien/ctrlp.vim'                " Fuzzy file search
-Plug 'scrooloose/nerdtree'           " File explorer
-Plug 'editorconfig/editorconfig-vim' " Editorconfig
+Plug 'tpope/vim-sensible'
+"Plug 'crusoexia/vim-monokai'
+Plug 'joshdick/onedark.vim'
+Plug 'scrooloose/syntastic'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'styled-components/vim-styled-components'
+Plug 'martinda/Jenkinsfile-vim-syntax'
+Plug 'Valloric/YouCompleteMe'
+Plug 'w0rp/ale'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'Yggdroot/indentLine'
+Plug 'itchyny/lightline.vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
 " monokai settings
-syntax on
 colorscheme monokai
+
+" CtrlP ignore
+set wildignore+=*/.git/*,*/node_modules/*
 
 " Personal preferences
 " enable syntax highlighting
@@ -48,4 +58,5 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+
 
