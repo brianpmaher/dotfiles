@@ -3,8 +3,7 @@ call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins.
 Plug 'tpope/vim-sensible'
-"Plug 'crusoexia/vim-monokai'
-Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
 Plug 'scrooloose/syntastic'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
@@ -16,19 +15,23 @@ Plug 'w0rp/ale'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'Yggdroot/indentLine'
+"Plug 'Yggdroot/indentLine'
 Plug 'itchyny/lightline.vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
-" monokai settings
-colorscheme monokai
+" colorscheme settings
+colorscheme gruvbox
+"let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_light='hard'
+set background=dark
 
-" CtrlP ignore
+" CtrlP
 set wildignore+=*/.git/*,*/node_modules/*
+let g:ctrlp_working_path_mode='0'
 
-" Personal preferences
+" ***** Personal preferences *****
 " enable syntax highlighting
 syntax enable
 
@@ -54,9 +57,8 @@ set mouse=a
 set autoread
 
 " general indentation
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
-
 
