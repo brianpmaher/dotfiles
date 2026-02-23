@@ -1,0 +1,1 @@
+/home/bpm/.config/omarchy/current/theme/neovim.lua
